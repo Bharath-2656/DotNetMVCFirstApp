@@ -1,0 +1,24 @@
+﻿@model StudentModel;
+
+@*@foreach (var emp in Model)
+{
+    <table>
+        <tr>ID: @emp.Id  </tr>
+        <tr>NAME: @emp.Name  </tr>
+        <tr>AGE: @emp.Age  </tr>
+    </table>
+    
+}*@
+
+@using (Html.BeginForm("Save", "Student", FormMethod.Post))
+{
+    
+    @Html.Label("Name:")
+    @Html.TextBoxFor(x=>x.Name)
+    <br />
+    @Html.Label("Age:")
+    @Html.TextBoxFor(x=>x.Age)
+    <br/>
+    <input type="Submit" value="Save" />
+}
+@Html.ActionLink("Show Students", "ShowStudent", "Student")

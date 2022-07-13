@@ -1,0 +1,12 @@
+﻿@model List<StudentModel>;
+
+@foreach (var emp in Model)
+{
+    <table>
+        <tr>ID: @emp.Id  </tr>
+        <tr>NAME: @emp.Name  </tr>
+        <tr>AGE: @emp.Age  </tr>
+    </table>
+    
+}
+
